@@ -7,3 +7,9 @@
 [submodule "3rdparty/QProgressIndicator"]
 	path = 3rdparty/QProgressIndicator
 	url = https://github.com/jcelerier/QProgressIndicator
+[submodule "3rdparty/kdnssd"]
+	path = 3rdparty/kdnssd
+	url = git://anongit.kde.org/kdnssd.git
+[submodule "3rdparty/extra-cmake-modules"]
+	path = 3rdparty/extra-cmake-modules
+	url = git://anongit.kde.org/extra-cmake-modules.git
