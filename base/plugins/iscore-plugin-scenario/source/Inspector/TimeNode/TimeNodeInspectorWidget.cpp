@@ -16,9 +16,10 @@
 #include <QLayout>
 #include <QPushButton>
 #include <QCompleter>
-
+#include <QTreeView>
 using namespace Scenario::Command;
 
+#include "ItemModel/ScenarioItemModel.hpp"
 
 TimeNodeInspectorWidget::TimeNodeInspectorWidget(
         const TimeNodeModel& object,
@@ -44,6 +45,11 @@ TimeNodeInspectorWidget::TimeNodeInspectorWidget(
     m_eventList = new InspectorSectionWidget{"Events", this};
 
     m_properties.push_back(dateWid);
+
+    auto itm = new ScenarioItemModel(const_cast<TimeNodeModel*>(&m_model), this);
+    auto view = new QTreeView;
+    view->setModel(itm);
+    m_properties.push_back(view);
     m_properties.push_back(m_eventList);
 
     updateAreaLayout(m_properties);
