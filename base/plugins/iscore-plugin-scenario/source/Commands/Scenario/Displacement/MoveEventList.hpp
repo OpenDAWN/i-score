@@ -17,7 +17,7 @@ public:
     MoveEventList(QObject* parent)
         :NamedObject("MoveEventList", parent){};
 
-    enum Strategy{ MOVING, CREATION, EXTRA };
+    enum Strategy{ MOVING, CREATION };
 
     /**
      * @brief getMoveEventFactory
