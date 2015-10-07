@@ -8,7 +8,7 @@ MoveEventOnCreationMeta::MoveEventOnCreationMeta(
         const TimeValue& newDate,
         ExpandMode mode)
     :SerializableMoveEvent{},
-     m_moveEventImplementation(MoveEventList::getFactory(MoveEventList::Strategy::MOVING)->make(std::move(scenarioPath), eventId, newDate, mode))
+     m_moveEventImplementation(MoveEventList::getFactory(MoveEventList::Strategy::CREATION)->make(std::move(scenarioPath), eventId, newDate, mode))
 {
 }
 

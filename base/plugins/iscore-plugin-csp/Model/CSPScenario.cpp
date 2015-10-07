@@ -12,7 +12,7 @@ CSPScenario::CSPScenario(const ScenarioModel& scenario, QObject *parent)
 {
     this->setObjectName("CSPScenario");
 
-    // ensure that start then end timenode are stored first of all
+    // ensure that start THEN end timenode are stored first of all
     m_startTimeNode = insertTimenode(scenario.startTimeNode().id());
     m_endTimeNode = insertTimenode(scenario.endTimeNode().id());
 
